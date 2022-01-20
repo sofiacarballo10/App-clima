@@ -22,7 +22,7 @@ export class DashboardService {
     let response: any;
     try {
       response = await this.httpClient
-        .get("http://api.openweathermap.org/data/2.5/weather?q="+ ciudadInput + "&appid=b6b1ed35af5f4156a4815b5af5f453e2")
+        .get("https://api.openweathermap.org/data/2.5/weather?q="+ ciudadInput + "&appid=b6b1ed35af5f4156a4815b5af5f453e2")
         .toPromise();
     } catch (error) {
       console.dir(error);
