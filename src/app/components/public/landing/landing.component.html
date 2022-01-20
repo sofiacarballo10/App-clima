@@ -1,0 +1,39 @@
+ <!-- Navbar -->
+  <nav class="contenido main-header navbar navbar-expand-md navbar-light navbar-white">
+    <div class="container">
+      <a href="" class="navbar-brand">
+        <span class="brand-text font-weight-light">AdminLTE 3</span>
+      </a>
+
+      <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Servicios</a>
+            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+              <li><a href="#" class="dropdown-item">Consultar el Clima</a></li>
+              <li><a href="#" class="dropdown-item">Maps</a></li>
+              <!-- End Level two -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right navbar links -->
+    </div>
+  </nav>
+  <!-- /.navbar -->
+<div class="contenedor">
+<h2 class="text-center">Logueate para consultar el Clima</h2>
+<button (click)="gotoLogin()" class="text-center btn btn-primary btn-block">Go to login</button>
+</div>

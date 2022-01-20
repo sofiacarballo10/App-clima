@@ -1,0 +1,11 @@
+.contenido{
+  margin-left: 0 !important;
+}
+
+.contenedor{
+  margin: 100px
+}
+button{
+  width: 200px;
+  margin: auto;
+}

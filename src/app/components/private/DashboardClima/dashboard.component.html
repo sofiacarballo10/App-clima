@@ -1,0 +1,73 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="contenido  background-imagen">
+  <section class="content-header">
+    <div class="container-fluid">
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Clima</li>
+          </ol>
+        </div>
+      </div>
+  </section>
+  <div class="contenedor">
+    <h1>Datos del Clima</h1>
+<!-- /.card-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4">
+        <form name="formulario" method="post" action="/send.php">
+          <div class="col-sm-6">
+            <label>Consulta el clima</label>
+          </div>
+            <input type="text" class="form-control" name="fecha" [(ngModel)]="ciudadInput"  placeholder="Search ciudad" />
+            <button type="submit" (click)="onClick(ciudadInput)" class="btn btn-primary btn-block">Buscar</button>
+        </form>
+      </div>
+      <div class="col-4">
+
+      </div>
+      <!-- /.col -->
+    </div>
+  </div>
+</section>
+  </div>
+
+</div>
+<H4>Historial de Busqueda</H4>
+<div class="card-body">
+  <p-table #dt [globalFilterFields]="['name','weather']" [rows]="5" [showCurrentPageReport]="true"
+           [rowsPerPageOptions]="[5,10,15]" styleClass="p-datatable-gridlines"
+           [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+           [value]="arrClima">
+    <ng-template pTemplate="caption">
+      <div class="flex">
+        <!-- <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(dt1)"></button> -->
+        <span class="p-input-icon-left ml-auto">
+                    <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')" placeholder="Search Ciudad" />
+                </span>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th pSortableColumn="name">
+          <div class="flex justify-content-center align-items-center">Ciudad</div>
+        </th>
+        <th>
+          <div class="flex justify-content-center align-items-center">
+            Clima
+          </div>
+        </th>
+    </ng-template>
+    <ng-template pTemplate="body" let-dato>
+      <tr [pSortableColumn]="dato.field">
+        <td>{{dato.name}}</td>
+        <td>{{dato.weather[0].description}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+<div class="button-refresh">
+  <button type="submit" [routerLink]="['Home/dashboard']" (click)="exit()" class="btn btn-primary btn-block">Refresh</button>
+</div>

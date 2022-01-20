@@ -1,0 +1,25 @@
+.contenedor{
+  width: auto;
+  height: 200px;
+  margin:20px
+}
+.background-imagen{
+  background-image: url("src/assets/img/clima1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px;
+}
+button{
+  width: 200px;
+}
+
+input{
+  width: 200px;
+}
+
+H4{
+  margin: 20px;
+}
+.button-refresh{
+  margin:20px
+}
