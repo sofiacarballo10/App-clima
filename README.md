@@ -1,4 +1,4 @@
-Este proyecto consta de una aplicación del clima creado con Angular 12. y primeng 12
+Este proyecto consta de una aplicación del clima creado con Angular 12. y Primeng 12
 compuesto por tres componentes: -Landing - Login -Dashboard.
 
 La aplicación consta de  un login que restringe el acceso a los usuarios logueados.
